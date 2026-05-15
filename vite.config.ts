@@ -1,8 +1,19 @@
-import { defineConfig } from 'vite';
-
-export default defineConfig({
-  optimizeDeps: {
-    exclude: ['manifold-3d'],
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true
   },
-  assetsInclude: ['**/*.wasm'],
-});
+  "include": ["src"]
+}
